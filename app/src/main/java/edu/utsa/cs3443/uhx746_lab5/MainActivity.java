@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         if (u.validate(usernameET.getText().toString(), passwordET.getText().toString())) {
                             Intent intent = new Intent(MainActivity.this, RoleActivity.class);
                             intent.putExtra("user", u);
+                            Toast.makeText(MainActivity.this, "Welcome " + u.getName(), Toast.LENGTH_SHORT).show();
                             startActivity(intent);
 
                             // indicate if login success
